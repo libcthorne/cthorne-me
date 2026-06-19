@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="English teaching for Japanese students - conversation and comprehension with a UK-based tutor fluent in Japanese (JLPT N1)." data-i18n-attr="content:meta.description">
+		<title>Christopher Thorne - English Teacher for Japanese students</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+			:root {
+				--color-text: #0f172a;
+				--color-text-muted: #64748b;
+				--color-accent: #1d4ed8;
+				--color-accent-dark: #1e40af;
+				--color-accent-soft: #eff6ff;
+				--color-surface: #f8fafc;
+				--color-border: #e2e8f0;
+				--shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+				--shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+				--radius: 0.75rem;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+				color: var(--color-text);
+				background-color: #fff;
+				line-height: 1.65;
+				margin: 0;
+			}
+
+			html[lang="ja"] body {
+				font-family: "Inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+			}
+
+			a {
+				color: var(--color-accent);
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: var(--color-accent-dark);
+				text-decoration: none;
+			}
+
+			.page-wrap {
+				max-width: 1040px;
+				margin: 0 auto;
+				padding-left: 1.25rem;
+				padding-right: 1.25rem;
+			}
+
+			@media (min-width: 992px) {
+				.page-wrap {
+					padding-left: 2rem;
+					padding-right: 2rem;
+				}
+			}
+
+			.hero {
+				background: linear-gradient(180deg, var(--color-surface) 0%, #fff 55%);
+				padding: 2.75rem 0 3.25rem;
+			}
+
+			.lang-switcher-wrap {
+				position: fixed;
+				top: 1rem;
+				right: 1rem;
+				z-index: 100;
+			}
+
+			.lang-switcher {
+				display: inline-flex;
+				background: #fff;
+				border: 1px solid var(--color-border);
+				border-radius: 0.375rem;
+				overflow: hidden;
+				box-shadow: var(--shadow-sm);
+			}
+
+			.lang-option {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 2.75rem;
+				height: 2.25rem;
+				padding: 0;
+				border: none;
+				background: transparent;
+				font-size: 1.25rem;
+				line-height: 1;
+				cursor: pointer;
+				opacity: 0.45;
+				transition: opacity 0.15s ease, background 0.15s ease;
+			}
+
+			.lang-option:hover {
+				opacity: 0.75;
+			}
+
+			.lang-option.active {
+				opacity: 1;
+				background: var(--color-accent-soft);
+			}
+
+			.lang-option + .lang-option {
+				border-left: 1px solid var(--color-border);
+			}
+
+			.hero-header {
+				display: flex;
+				align-items: center;
+				gap: 1.25rem;
+			}
+
+			.hero-header-body {
+				flex: 1;
+				min-width: 0;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1.25rem;
+			}
+
+			.hero-header-text {
+				flex: 1;
+				min-width: 0;
+			}
+
+			.profile-photo {
+				width: 112px;
+				height: 112px;
+				object-fit: cover;
+				border-radius: 50%;
+				border: 3px solid #fff;
+				box-shadow: var(--shadow-md);
+				flex-shrink: 0;
+			}
+
+			.hero h1 {
+				font-size: clamp(1.75rem, 4vw, 2.125rem);
+				font-weight: 700;
+				letter-spacing: -0.025em;
+				line-height: 1.15;
+				margin: 0 0 0.4rem;
+			}
+
+			.hero-subtitle {
+				font-size: 1rem;
+				font-weight: 500;
+				color: var(--color-accent);
+				margin: 0;
+			}
+
+			.hero-intro-panel {
+				margin-top: 1.75rem;
+				background: #fff;
+				border: 1px solid var(--color-border);
+				border-radius: var(--radius);
+				padding: 1.5rem 1.625rem;
+				box-shadow: var(--shadow-sm);
+			}
+
+			.hero-intro {
+				font-size: 1.03125rem;
+				color: var(--color-text-muted);
+				margin-bottom: 1rem;
+			}
+
+			.hero-intro:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.credentials {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin-top: 1.25rem;
+				padding-top: 1.25rem;
+				border-top: 1px solid var(--color-border);
+			}
+
+			.credential {
+				font-size: 0.8125rem;
+				font-weight: 500;
+				color: var(--color-text-muted);
+				background: var(--color-surface);
+				border: 1px solid var(--color-border);
+				border-radius: 999px;
+				padding: 0.35rem 0.85rem;
+			}
+
+			@media (max-width: 767px) {
+				.hero-header {
+					flex-direction: column;
+					text-align: center;
+				}
+
+				.hero-header-body {
+					flex-direction: column;
+					align-items: center;
+					width: 100%;
+				}
+
+				.credentials {
+					justify-content: center;
+				}
+
+				.hero-cta {
+					width: 100%;
+					text-align: center;
+				}
+			}
+
+			.hero-cta {
+				flex-shrink: 0;
+			}
+
+			.btn-hero {
+				display: inline-block;
+				background: var(--color-accent);
+				color: #fff;
+				font-weight: 600;
+				border-radius: 0.375rem;
+				padding: 0.8125rem 1.75rem;
+				transition: background 0.15s ease, transform 0.15s ease;
+			}
+
+			.btn-hero:hover {
+				background: var(--color-accent-dark);
+				color: #fff;
+				transform: translateY(-1px);
+			}
+
+			.section {
+				padding: 4rem 0;
+			}
+
+			.section + .section {
+				border-top: 1px solid var(--color-border);
+			}
+
+			.section-alt {
+				background-color: var(--color-surface);
+			}
+
+			.section-head {
+				margin-bottom: 2rem;
+			}
+
+			.section-label {
+				display: inline-block;
+				font-size: 0.6875rem;
+				font-weight: 600;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--color-accent);
+				background: var(--color-accent-soft);
+				border-radius: 999px;
+				padding: 0.3rem 0.65rem;
+				margin-bottom: 0.75rem;
+			}
+
+			html[lang="ja"] .section-label {
+				text-transform: none;
+				letter-spacing: 0.02em;
+				font-size: 0.75rem;
+			}
+
+			.section h2 {
+				font-size: 1.625rem;
+				font-weight: 700;
+				letter-spacing: -0.025em;
+				line-height: 1.2;
+				margin: 0 0 0.5rem;
+			}
+
+			.section-lead {
+				font-size: 1rem;
+				color: var(--color-text-muted);
+				margin: 0;
+			}
+
+			.goals-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 0.875rem;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			@media (min-width: 768px) {
+				.goals-grid {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+
+			.goals-grid li {
+				display: flex;
+				align-items: flex-start;
+				gap: 0.75rem;
+				background: #fff;
+				border: 1px solid var(--color-border);
+				border-radius: var(--radius);
+				padding: 1rem 1.125rem;
+				font-size: 0.9375rem;
+				line-height: 1.5;
+				box-shadow: var(--shadow-sm);
+			}
+
+			.section-alt .goals-grid li {
+				background: #fff;
+			}
+
+			.goals-grid li::before {
+				content: "";
+				flex-shrink: 0;
+				width: 0.4375rem;
+				height: 0.4375rem;
+				margin-top: 0.5em;
+				border-radius: 50%;
+				background: var(--color-accent);
+			}
+
+			.pricing-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 1.25rem;
+				align-items: stretch;
+			}
+
+			@media (min-width: 768px) {
+				.pricing-grid {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+
+			.pricing-card {
+				position: relative;
+				background: #fff;
+				border: 1px solid var(--color-border);
+				border-radius: var(--radius);
+				padding: 1.625rem 1.5rem 1.5rem;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				box-shadow: var(--shadow-sm);
+				transition: box-shadow 0.2s ease, transform 0.2s ease;
+			}
+
+			.pricing-card:hover {
+				box-shadow: var(--shadow-md);
+				transform: translateY(-2px);
+			}
+
+			.pricing-card h3 {
+				font-size: 1.0625rem;
+				font-weight: 700;
+				margin: 0 0 0.5rem;
+			}
+
+			.pricing-card .price {
+				font-size: 1.5rem;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+				color: var(--color-text);
+				margin-bottom: 0.25rem;
+			}
+
+			.pricing-card .price span {
+				font-size: 0.875rem;
+				font-weight: 500;
+				color: var(--color-text-muted);
+			}
+
+			.pricing-card .frequency {
+				font-size: 0.875rem;
+				color: var(--color-text-muted);
+				margin-bottom: 1rem;
+				padding-bottom: 1rem;
+				border-bottom: 1px solid var(--color-border);
+			}
+
+			.pricing-card ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				flex: 1;
+				font-size: 0.875rem;
+				color: var(--color-text-muted);
+			}
+
+			.pricing-card li {
+				position: relative;
+				padding-left: 1.125rem;
+				margin-bottom: 0.55rem;
+			}
+
+			.pricing-card li:last-child {
+				margin-bottom: 0;
+			}
+
+			.pricing-card li::before {
+				content: "✓";
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-size: 0.75rem;
+				font-weight: 700;
+				color: var(--color-accent);
+			}
+
+			.about-text {
+				font-size: 1.03125rem;
+				color: var(--color-text-muted);
+				max-width: 44rem;
+			}
+
+			.about-text p:last-child {
+				margin-bottom: 0;
+			}
+
+			.contact-section {
+				background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+				color: #fff;
+				padding: 3.5rem 0;
+			}
+
+			.contact-section h2 {
+				color: #fff;
+				font-size: 1.625rem;
+				font-weight: 700;
+				letter-spacing: -0.025em;
+				margin-bottom: 0.5rem;
+			}
+
+			.contact-section p {
+				color: #94a3b8;
+				margin-bottom: 0;
+			}
+
+			.contact-inner {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1.25rem;
+			}
+
+			.btn-contact {
+				display: inline-block;
+				background: #fff;
+				color: var(--color-text);
+				font-weight: 600;
+				border: none;
+				border-radius: 0.375rem;
+				padding: 0.8125rem 1.75rem;
+				transition: background 0.15s ease, transform 0.15s ease;
+			}
+
+			.btn-contact:hover {
+				background: #f1f5f9;
+				color: var(--color-text);
+				transform: translateY(-1px);
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="lang-switcher-wrap">
+			<div class="lang-switcher" role="group" data-i18n-attr="aria-label:lang.switcherLabel">
+				<button type="button" class="lang-option" data-lang="en" data-i18n-attr="aria-label:lang.english;title:lang.english">🇬🇧</button>
+				<button type="button" class="lang-option" data-lang="jp" data-i18n-attr="aria-label:lang.japanese;title:lang.japanese">🇯🇵</button>
+			</div>
+		</div>
+		<header class="hero">
+			<div class="page-wrap">
+				<div class="hero-header">
+					<img src="profile.jpg" alt="Christopher Thorne" class="profile-photo" data-i18n-attr="alt:hero.photoAlt">
+					<div class="hero-header-body">
+						<div class="hero-header-text">
+							<h1 data-i18n="hero.name">Christopher Thorne</h1>
+							<p class="hero-subtitle" data-i18n="hero.subtitle">English Teacher for Japanese students</p>
+						</div>
+						<div class="hero-cta">
+							<a href="mailto:info@cthorne.me" class="btn-hero" data-i18n="hero.cta">Get in touch</a>
+						</div>
+					</div>
+				</div>
+				<div class="hero-intro-panel">
+					<p class="hero-intro" data-i18n="hero.intro1">
+						Hi, I'm Chris! I offer English teaching to Japanese students who want to improve their speaking and comprehension.
+					</p>
+					<p class="hero-intro" data-i18n="hero.intro2">
+						I'm based in the UK, but spent a year living in Kyoto in 2014 and have been learning Japanese ever since.
+						I hold JLPT N1 and am fluent. As someone who has reached fluency in a second language myself, I understand
+						the challenges along the way and can share practical tips and strategies to help you master English.
+					</p>
+					<div class="credentials">
+						<span class="credential" data-i18n="hero.credentials.native">Native</span>
+						<span class="credential" data-i18n="hero.credentials.britishEnglish">British English</span>
+						<span class="credential" data-i18n="hero.credentials.livedInJapan">Lived in Japan</span>
+						<span class="credential" data-i18n="hero.credentials.jlptN1">JLPT N1</span>
+						<span class="credential" data-i18n="hero.credentials.fluentJaFr">Fluent in Japanese &amp; French</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="section section-alt">
+			<div class="page-wrap">
+				<div class="section-head">
+					<span class="section-label" data-i18n="services.label">Services</span>
+					<h2 data-i18n="services.heading">What we can work on</h2>
+					<p class="section-lead" data-i18n="services.lead">Focused sessions tailored to your goals, whether casual conversation or exam preparation.</p>
+				</div>
+				<ul class="goals-grid">
+					<li data-i18n="services.goals.0">Speaking with more confidence in everyday conversation</li>
+					<li data-i18n="services.goals.1">Understanding native-speed English in films, podcasts, and meetings</li>
+					<li data-i18n="services.goals.2">Building vocabulary for work, travel, or study abroad</li>
+					<li data-i18n="services.goals.3">Preparing for interviews, presentations, or English exams</li>
+					<li data-i18n="services.goals.4">Improving pronunciation and sounding more natural</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="page-wrap">
+				<div class="section-head">
+					<span class="section-label" data-i18n="pricing.label">Plans</span>
+					<h2 data-i18n="pricing.heading">Pricing</h2>
+					<p class="section-lead" data-i18n="pricing.lead">Choose a plan that fits your schedule and ambitions. All rates are per hour.</p>
+				</div>
+				<div class="pricing-grid">
+					<article class="pricing-card">
+						<h3 data-i18n="pricing.conversation.title">Conversation</h3>
+						<p class="price" data-i18n-price="pricing.conversation.price">From ¥2,000 <span>/ hr</span></p>
+						<p class="frequency" data-i18n="pricing.conversation.frequency">Weekly sessions to:</p>
+						<ul>
+							<li data-i18n="pricing.conversation.items.0">Practise conversation</li>
+							<li data-i18n="pricing.conversation.items.1">Read through news articles together</li>
+							<li data-i18n="pricing.conversation.items.2">Answer any questions about grammar</li>
+						</ul>
+					</article>
+					<article class="pricing-card">
+						<h3 data-i18n="pricing.qualification.title">Qualification</h3>
+						<p class="price" data-i18n-price="pricing.qualification.price">From ¥5,000 <span>/ hr</span></p>
+						<p class="frequency" data-i18n="pricing.qualification.frequency">Multiple sessions per week to:</p>
+						<ul>
+							<li data-i18n="pricing.qualification.items.0">Work towards language qualifications (EIKEN, TOEIC, IELTS, TOEFL)</li>
+							<li data-i18n="pricing.qualification.items.1">Advanced listening exercises</li>
+							<li data-i18n="pricing.qualification.items.2">Tailored speaking exercises</li>
+							<li data-i18n="pricing.qualification.items.3">Written exercise reviews</li>
+						</ul>
+					</article>
+					<article class="pricing-card">
+						<h3 data-i18n="pricing.professional.title">Professional</h3>
+						<p class="price" data-i18n-price="pricing.professional.price">From ¥10,000 <span>/ hr</span></p>
+						<p class="frequency" data-i18n="pricing.professional.frequency">Multiple sessions per week to:</p>
+						<ul>
+							<li data-i18n="pricing.professional.items.0">Prepare for a professional event in English</li>
+							<li data-i18n="pricing.professional.items.1">Practice presentation skills</li>
+							<li data-i18n="pricing.professional.items.2">Master pronunciation so you can be understood clearly</li>
+							<li data-i18n="pricing.professional.items.3">Use native-level phrasing and vocabulary to leave a strong impression</li>
+						</ul>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-alt">
+			<div class="page-wrap">
+				<div class="section-head">
+					<span class="section-label" data-i18n="about.label">Background</span>
+					<h2 data-i18n="about.heading">About me</h2>
+				</div>
+				<div class="about-text">
+					<p data-i18n="about.p1">
+						I have a long-standing passion for language learning. I started studying Japanese in 2010 and was comfortable
+						in conversation by 2014, thanks to regular speaking practice with native speakers and consistent self-study
+						at home. I am also fluent in French.
+					</p>
+					<p data-i18n-html="about.p2">
+						I am a strong advocate of spaced repetition - particularly through the
+						<a href="https://apps.ankiweb.net/" target="_blank" rel="noopener noreferrer">Anki</a> app - and of immersion:
+						finding books, films, podcasts, or hobbies you genuinely enjoy in the language you are learning is the best
+						way to stay motivated over the long term.
+					</p>
+					<p data-i18n-html="about.p3">
+						Outside of teaching, I work as a software engineer.
+						You can see my professional background on
+						<a href="https://www.linkedin.com/in/libcthorne/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-section" id="contact">
+			<div class="page-wrap">
+				<div class="contact-inner">
+					<div>
+						<h2 data-i18n="contact.heading">Get in touch</h2>
+						<p data-i18n="contact.lead">Interested in lessons or have a question? I'd be happy to hear from you.</p>
+					</div>
+					<a href="mailto:info@cthorne.me" class="btn btn-contact btn-lg" data-i18n="contact.cta">Contact me</a>
+				</div>
+			</div>
+		</section>
+		<script src="i18n.js"></script>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+{
+	"meta": {
+		"title": "Christopher Thorne - English Teacher for Japanese students",
+		"description": "English teaching for Japanese students - conversation and comprehension with a UK-based tutor fluent in Japanese (JLPT N1)."
+	},
+	"lang": {
+		"switcherLabel": "Language",
+		"english": "English",
+		"japanese": "日本語"
+	},
+	"hero": {
+		"name": "Christopher Thorne",
+		"photoAlt": "Christopher Thorne",
+		"subtitle": "English Teacher for Japanese students",
+		"cta": "Get in touch",
+		"intro1": "Hi, I'm Chris! I offer English teaching to Japanese students who want to improve their speaking and comprehension.",
+		"intro2": "I'm based in the UK, but spent a year living in Kyoto in 2014 and have been learning Japanese ever since. I hold JLPT N1 and am fluent. As someone who has reached fluency in a second language myself, I understand the challenges along the way and can share practical tips and strategies to help you master English.",
+		"credentials": {
+			"native": "Native",
+			"britishEnglish": "British English",
+			"livedInJapan": "Lived in Japan",
+			"jlptN1": "JLPT N1",
+			"fluentJaFr": "Fluent in Japanese & French"
+		}
+	},
+	"services": {
+		"label": "Services",
+		"heading": "What we can work on",
+		"lead": "Focused sessions tailored to your goals, whether casual conversation or exam preparation.",
+		"goals": {
+			"0": "Speaking with more confidence in everyday conversation",
+			"1": "Understanding native-speed English in films, podcasts, and meetings",
+			"2": "Building vocabulary for work, travel, or study abroad",
+			"3": "Preparing for interviews, presentations, or English exams",
+			"4": "Improving pronunciation and sounding more natural"
+		}
+	},
+	"pricing": {
+		"label": "Plans",
+		"heading": "Pricing",
+		"lead": "Choose a plan that fits your schedule and ambitions. All rates are per hour.",
+		"priceUnit": "/ hr",
+		"conversation": {
+			"title": "Conversation",
+			"price": "From ¥2,000",
+			"frequency": "Weekly sessions to:",
+			"items": {
+				"0": "Practise conversation",
+				"1": "Read through news articles together",
+				"2": "Answer any questions about grammar"
+			}
+		},
+		"qualification": {
+			"title": "Qualification",
+			"price": "From ¥5,000",
+			"frequency": "Multiple sessions per week to:",
+			"items": {
+				"0": "Work towards language qualifications (EIKEN, TOEIC, IELTS, TOEFL)",
+				"1": "Advanced listening exercises",
+				"2": "Tailored speaking exercises",
+				"3": "Written exercise reviews"
+			}
+		},
+		"professional": {
+			"title": "Professional",
+			"price": "From ¥10,000",
+			"frequency": "Multiple sessions per week to:",
+			"items": {
+				"0": "Prepare for a professional event in English",
+				"1": "Practice presentation skills",
+				"2": "Master pronunciation so you can be understood clearly",
+				"3": "Use native-level phrasing and vocabulary to leave a strong impression"
+			}
+		}
+	},
+	"about": {
+		"label": "Background",
+		"heading": "About me",
+		"p1": "I have a long-standing passion for language learning. I started studying Japanese in 2010 and was comfortable in conversation by 2014, thanks to regular speaking practice with native speakers and consistent self-study at home. I am also fluent in French.",
+		"p2": "I am a strong advocate of spaced repetition - particularly through the <a href=\"https://apps.ankiweb.net/\" target=\"_blank\" rel=\"noopener noreferrer\">Anki</a> app - and of immersion: finding books, films, podcasts, or hobbies you genuinely enjoy in the language you are learning is the best way to stay motivated over the long term.",
+		"p3": "Outside of teaching, I work as a software engineer. You can see my professional background on <a href=\"https://www.linkedin.com/in/libcthorne/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a>."
+	},
+	"contact": {
+		"heading": "Get in touch",
+		"lead": "Interested in lessons or have a question? I'd be happy to hear from you.",
+		"cta": "Contact me"
+	}
+}
